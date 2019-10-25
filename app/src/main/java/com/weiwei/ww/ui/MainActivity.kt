@@ -29,11 +29,7 @@ class MainActivity : BaseVMActivity<MainViewModel>() {
         register.setOnClickListener {
             mViewModel.register()
             isLogin = true
-
-
         }
-
-        Log.e("weiwei","是否缓存bannr = $banners")
 
     }
 

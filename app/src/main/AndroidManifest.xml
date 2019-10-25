@@ -30,6 +30,11 @@
             android:name="notch.config"
             android:value="portrait|landscape" />
 
+        <!-- 初始化 -->
+        <provider
+            android:name=".init.MmkvInit"
+            android:authorities="${applicationId}.MmkvInit" />
+
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

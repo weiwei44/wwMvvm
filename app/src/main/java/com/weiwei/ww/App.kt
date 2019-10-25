@@ -16,12 +16,7 @@ class App : Application() {
         super.onCreate()
         CONTEXT = applicationContext
 
-        initMmkv()
     }
 
-    private fun initMmkv() {
-        // 设置初始化的根目录
-        val dir = filesDir.absolutePath + "/cache"
-        val rootDir = MMKV.initialize(dir)
-    }
+
 }
