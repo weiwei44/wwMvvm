@@ -14,12 +14,13 @@ import kotlin.reflect.KProperty
 class Cache<T>(val name:String,private val default:T,private val cacheId:String = "weiwei_cache_id") : ReadWriteProperty<Any?, T>{
 
     companion object {
+        const val TEST = "test"
         const val IS_LOGIN = "is_login"
         const val BANNERS = "banners"
     }
 
     private val mmkv by lazy {
-        MMKV.mmkvWithID(cacheId)
+        MMKV.mmkvWithID(cacheId,MMKV.MULTI_PROCESS_MODE)
     }
 
     override fun getValue(thisRef: Any?, property: KProperty<*>) = getValue(name,default)

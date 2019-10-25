@@ -1,6 +1,7 @@
 package com.weiwei.ww.ui
 
 import android.app.ProgressDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -41,7 +42,8 @@ class MainActivity : BaseVMActivity<MainViewModel>() {
     }
 
     override fun initData() {
-
+        Log.e("weiwei","cache $banners")
+        this.startService(Intent(this,ProcessTestService::class.java))
     }
 
     override fun startObserve() {

@@ -9,7 +9,12 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
 
-
+/**
+ * @Author weiwei
+ * create by 2019-10-24
+ * Des: <功能简述>
+ * 代码不优雅，写锤子代码
+ */
 abstract class BaseFragment : androidx.fragment.app.Fragment(), CoroutineScope by MainScope(),
     SimpleImmersionOwner {
 

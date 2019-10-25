@@ -1,6 +1,5 @@
 package com.weiwei.ww.init
 
-import android.util.Log
 import com.tencent.mmkv.MMKV
 import com.weiwei.ww.base.BaseInitializer
 

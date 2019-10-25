@@ -14,7 +14,12 @@ import com.gyf.immersionbar.components.SimpleImmersionOwner
 import com.weiwei.ww.R
 import java.lang.reflect.ParameterizedType
 
-
+/**
+ * @Author weiwei
+ * create by 2019-10-24
+ * Des: <功能简述>
+ * 代码不优雅，写锤子代码
+ */
 abstract class BaseVMActivity<VM : BaseViewModel> : AppCompatActivity(), LifecycleObserver,
     SimpleImmersionOwner {
 
