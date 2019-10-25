@@ -1,0 +1,240 @@
+/*
+ * Copyright (C) 2018 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+/**
+ * Shared file between builds so that they can all use the same dependencies and
+ * maven repositories.
+ **/
+ext.deps = [:]
+def versions = [:]
+def deps = [:]
+
+versions.kotlin_version = "1.3.41"
+versions.kotlinx_coroutines_android = "1.3.0"
+versions.navigation = "2.1.0"
+versions.appcompat = "1.1.0"
+versions.core_ktx = "1.2.0-alpha04"
+versions.activity_ktx = "1.1.0-alpha03"
+versions.lifecycle_extensions = "2.1.0"
+versions.paging = "2.1.0"
+versions.material = "1.0.0"
+versions.constraintlayout = "1.1.3"
+versions.recyclerview = "1.0.0"
+versions.rxjava = "2.2.10"
+versions.rxandroid = "2.1.1"
+versions.rxkotlin = "2.3.0"
+versions.talos = "0.2.2"
+versions.gson = "2.8.5"
+versions.retrofit_version = "2.6.0"
+versions.logging_interceptor = "4.0.1"
+versions.material_dialogs = "2.8.1"
+versions.rxpermissions = "0.10.2"
+versions.crashreport_upgrade = "1.4.1"
+versions.nativecrashreport = "3.6.0.1"
+versions.symtabfileuploader = "2.2.1"
+versions.bugtags = "2.1.5"
+versions.utilcode = "1.23.7"
+versions.glide = "4.9.0"
+versions.immersionbar = "3.0.0"
+versions.halia = "f3f067d470"
+versions.zeus = "0.0.2"
+versions.socialcarnival = "1.1.3"
+versions.anko_version = "0.10.8"
+versions.aoide = "0.2.3"
+versions.superijkplayer = "1.0"
+versions.okdownload = "1.0.5"
+versions.ali_oss = "2.9.2"
+versions.retrofit_url = "1.1.0"
+versions.magicIndicator = "1.6.0"
+versions.matisse = "0.5.3-beta2"
+versions.multitype = "4.0.0-alpha3"
+versions.luban = "1.1.8"
+versions.hybrid = "36998140a7"
+versions.apollo = "1.0.2"
+versions.room = "2.1.0"
+versions.wechat = "5.4.3"
+versions.shapedimageview = "0.8.6"
+versions.audioconversion = "0.0.1"
+versions.jcore = "2.1.2"
+versions.jpush = "3.3.4"
+versions.autosize = "1.1.2"
+versions.condom="2.3.1"
+
+deps.autosize = "me.jessyan:autosize:$versions.autosize"
+
+deps.condom = "com.oasisfeng.condom:library:$versions.condom"
+
+deps.luban = "top.zibin:Luban:$versions.luban"
+
+deps.wechat =  "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:$versions.wechat"
+
+deps.multitype = "me.drakeet.multitype:multitype:$versions.multitype"
+
+deps.matisse = "com.zhihu.android:matisse:$versions.matisse"
+
+deps.magicIndicator = "com.github.hackware1993:MagicIndicator:$versions.magicIndicator"
+
+deps.retrofit_url = "me.jessyan:retrofit-url-manager:$versions.retrofit_url"
+
+deps.ali_oss = "com.aliyun.dpa:oss-android-sdk:$versions.ali_oss"
+
+deps.material_dialogs = "com.afollestad.material-dialogs:core:$versions.material_dialogs"
+
+deps.utilcode = "com.blankj:utilcode:$versions.utilcode"
+
+deps.okdownload = "com.liulishuo.okdownload:okdownload:$versions.okdownload"
+
+deps.rxpermissions = "com.github.tbruyelle:rxpermissions:$versions.rxpermissions"
+
+deps.bugtags = "com.bugtags.library:bugtags-gradle:$versions.bugtags"
+
+deps.statusbar = "com.jaeger.statusbarutil:library:1.5.1"
+
+def apollo = [:]
+apollo.apollo = "com.github.lsxiao.Apollo:core:$versions.apollo"
+apollo.processor = "com.github.lsxiao.Apollo:processor:$versions.apollo"
+deps.apollo = apollo
+
+def kotlin = [:]
+kotlin.kotlin_stdlib_jdk7 = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin_version"
+kotlin.kotlin_gradle_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin_version"
+kotlin.kotlinx_coroutines_android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.kotlinx_coroutines_android"
+deps.kotlin = kotlin
+
+def glide = [:]
+glide.glide = "com.github.bumptech.glide:glide:$versions.glide"
+glide.okhttp3_integration = "com.github.bumptech.glide:okhttp3-integration:$versions.glide"
+glide.compiler = "com.github.bumptech.glide:compiler:$versions.glide"
+deps.glide = glide
+
+def immersionbar = [:]
+immersionbar.immersionbar = "com.gyf.immersionbar:immersionbar:$versions.immersionbar"
+immersionbar.immersionbar_components = "com.gyf.immersionbar:immersionbar-components:$versions.immersionbar"
+immersionbar.immersionbar_ktx = "com.gyf.immersionbar:immersionbar-ktx:$versions.immersionbar"
+deps.immersionbar = immersionbar
+
+def bugly = [:]
+bugly.crashreport_upgrade = "com.tencent.bugly:crashreport_upgrade:$versions.crashreport_upgrade"
+bugly.nativecrashreport = "com.tencent.bugly:nativecrashreport:$versions.nativecrashreport"
+bugly.symtabfileuploader = "com.tencent.bugly:symtabfileuploader:$versions.symtabfileuploader"
+deps.bugly = bugly
+
+def paging = [:]
+paging.paging_runtime = "androidx.paging:paging-runtime:$versions.paging"
+paging.paging_rxjava2 = "androidx.paging:paging-rxjava2:$versions.paging"
+deps.paging = paging
+
+def room = [:]
+room.runtime = "androidx.room:room-runtime:$versions.room"
+room.rxjava2 = "androidx.room:room-rxjava2:$versions.room"
+room.compiler = "androidx.room:room-compiler:$versions.room"
+deps.room = room
+
+def material = [:]
+material.material = "com.google.android.material:material:$versions.material"
+deps.material = material
+
+def rx = [:]
+rx.rxjava = "io.reactivex.rxjava2:rxjava:$versions.rxjava"
+rx.rxandroid = "io.reactivex.rxjava2:rxandroid:$versions.rxandroid"
+rx.rxkotlin = "io.reactivex.rxjava2:rxkotlin:$versions.rxkotlin"
+deps.rx = rx
+
+def quickkit = [:]
+quickkit.talos = "cn.quickits:Talos:$versions.talos"
+quickkit.halia = "cn.quickits:Halia:$versions.halia"
+quickkit.zeus = "com.github.iamdennisme:Zeus:$versions.zeus"
+quickkit.socialcarnival = "com.github.iamdennisme:SocialCarnival:$versions.socialcarnival"
+quickkit.aoide = "cn.quickits:Aoide:$versions.aoide"
+quickkit.hybrid = "com.github.iamdennisme:Hybrid-Android:$versions.hybrid"
+quickkit.shapedimageview = "cn.gavinliu:ShapedImageView:$versions.shapedimageview"
+quickkit.audioconversion = "com.github.iamdennisme:AudioConversion:$versions.audioconversion"
+
+
+deps.quickkit = quickkit
+
+def anko = [:]
+anko.anko_commons = "org.jetbrains.anko:anko-commons:$versions.anko_version"
+anko.anko_sdk25 = "org.jetbrains.anko:anko-sdk25:$versions.anko_version"
+anko.anko_sdk25_listeners = "org.jetbrains.anko:anko-sdk25-listeners:$versions.anko_version"
+anko.anko_appcompat_v7 = "org.jetbrains.anko:anko-appcompat-v7:$versions.anko_version"
+anko.anko_recyclerview_v7 = "org.jetbrains.anko:anko-recyclerview-v7:$versions.anko_version"
+anko.recyclerview_v7_coroutines = "org.jetbrains.anko:anko-recyclerview-v7-coroutines:$versions.anko_version"
+deps.anko = anko
+
+def google = [:]
+google.gson = "com.google.code.gson:gson:$versions.gson"
+deps.google = google
+
+def jpush = [:]
+jpush.jpush = "cn.jiguang.sdk:jpush:$versions.jpush"
+jpush.jcore = "cn.jiguang.sdk:jcore:$versions.jcore"
+deps.jpush = jpush
+
+def refresh = [:]
+refresh.smartrefreshlayout = "com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7"
+refresh.smartrefreshheader = "com.scwang.smartrefresh:SmartRefreshHeader:1.0.4-7"
+jpush.jcore = "cn.jiguang.sdk:jcore:$versions.jcore"
+deps.refresh = refresh
+
+
+def superijkplayer = [:]
+superijkplayer.arm64 = "com.github.iamdennisme.super_ijkplayer:ijkplayer-arm64:$versions.superijkplayer"
+superijkplayer.armv5 = "com.github.iamdennisme.super_ijkplayer:ijkplayer-armv5:$versions.superijkplayer"
+superijkplayer.armv7a = "com.github.iamdennisme.super_ijkplayer:ijkplayer-armv7a:$versions.superijkplayer"
+superijkplayer.exo = "com.github.iamdennisme.super_ijkplayer:ijkplayer-exo:$versions.superijkplayer"
+superijkplayer.java = "com.github.iamdennisme.super_ijkplayer:ijkplayer-java:$versions.superijkplayer"
+superijkplayer.x86 = "com.github.iamdennisme.super_ijkplayer:ijkplayer-x86:$versions.superijkplayer"
+superijkplayer.x86_64 = "com.github.iamdennisme.super_ijkplayer:ijkplayer-x86_64:$versions.superijkplayer"
+deps.superijkplayer = superijkplayer
+
+def retrofit2 = [:]
+retrofit2.retrofit = "com.squareup.retrofit2:retrofit:$versions.retrofit_version"
+retrofit2.converter_gson = "com.squareup.retrofit2:converter-gson:$versions.retrofit_version"
+retrofit2.adapter_rxjava2 = "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit_version"
+retrofit2.converter_scalars = "com.squareup.retrofit2:converter-scalars:$versions.retrofit_version"
+retrofit2.logging_interceptor = "com.squareup.okhttp3:logging-interceptor:$versions.logging_interceptor"
+deps.retrofit2 = retrofit2
+
+
+def navigation = [:]
+navigation.fragment = "androidx.navigation:navigation-fragment:$versions.navigation"
+navigation.fragment_ktx = "androidx.navigation:navigation-fragment-ktx:$versions.navigation"
+navigation.ui = "androidx.navigation:navigation-ui:$versions.navigation"
+navigation.ui_ktx = "androidx.navigation:navigation-ui-ktx:$versions.navigation"
+navigation.common_ktx = "androidx.navigation:navigation-common-ktx:$versions.navigation"
+navigation.runtime_ktx = "androidx.navigation:navigation-runtime-ktx:$versions.navigation"
+navigation.safe_args_gradle_plugin = "androidx.navigation:navigation-safe-args-gradle-plugin:$versions.navigation"
+deps.navigation = navigation
+
+def androidx = [:]
+androidx.appcompat = "androidx.appcompat:appcompat:$versions.appcompat"
+androidx.core_ktx = "androidx.core:core-ktx:$versions.core_ktx"
+androidx.activity_ktx = "androidx.activity:activity-ktx:$versions.activity_ktx"
+androidx.lifecycle_extensions = "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle_extensions"
+androidx.constraintlayout = "androidx.constraintlayout:constraintlayout:$versions.constraintlayout"
+androidx.recyclerview = "androidx.recyclerview:recyclerview:$versions.recyclerview"
+deps.androidx = androidx
+ext.deps = deps
+
+static def addRepos(RepositoryHandler handler) {
+    handler.google()
+    handler.jcenter()
+    handler.maven { url 'https://jitpack.io' }
+}
+
+ext.addRepos = this.&addRepos
